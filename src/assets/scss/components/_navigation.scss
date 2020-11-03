@@ -1,0 +1,10 @@
+nav {
+  a {
+    @include rem(margin-right, 10px);
+    color: $black;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

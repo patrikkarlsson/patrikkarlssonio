@@ -1,0 +1,17 @@
+header {
+  @include rem(max-width, $max-width);
+  @include rem(padding, $gutter * 2);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+
+  .logo {
+    @include rem(width, 50px);
+    @include rem(height, 50px);
+  }
+
+  nav {
+    margin: 0 auto;
+  }
+}
