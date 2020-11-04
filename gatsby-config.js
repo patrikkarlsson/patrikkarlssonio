@@ -7,6 +7,9 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    {
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+    },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
