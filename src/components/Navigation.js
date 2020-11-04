@@ -5,7 +5,6 @@ const Navigation = () => {
   return (
     <nav>
       <Link to="/work">Work</Link>
-      <Link to="/about">About</Link>
     </nav>
   )
 }

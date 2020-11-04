@@ -1,0 +1,22 @@
+.-text-center {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @include rem(margin-bottom, $gutter);
+  font-family: $font-family-heading;
+  font-weight: 500;
+  line-height: 1.1;
+
+  @media #{$breakpoint-sm-up} {
+    @include rem(margin-bottom, $gutter);
+  }
+}
+
+h1 {
+  @include fluid-type('font-size', $xs-max, $lg-max, 38px, 80px);
+}

@@ -1,17 +1,28 @@
 header {
-  @include rem(max-width, $max-width);
-  @include rem(padding, $gutter * 2);
-  display: flex;
-  align-items: center;
+  @include row();
+  @include middle();
+  @include center();
+  @include rem(padding-top, ($gutter * 2));
+  @include rem(min-height, 50px);
   width: 100%;
   margin: 0 auto;
+  position: relative;
 
-  .logo {
-    @include rem(width, 50px);
-    @include rem(height, 50px);
+  .brand {
+    a {
+      @include rem(width, 50px);
+      @include rem(height, 50px);
+      display: flex;
+
+      img {
+        background-color: $white;
+        object-fit: cover;
+      }
+    }
   }
 
-  nav {
-    margin: 0 auto;
+  nav,
+  > div {
+    @include col(4);
   }
 }

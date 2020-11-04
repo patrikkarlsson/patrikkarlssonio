@@ -1,8 +1,12 @@
 nav {
-  a {
-    @include rem(margin-right, 10px);
-    color: $black;
+  display: flex;
+  justify-content: center;
 
+  a {
+    @include rem(margin-right, 30px);
+    color: $black;
+    text-decoration: none;
+    
     &:last-child {
       margin-right: 0;
     }
