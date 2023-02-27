@@ -35,8 +35,5 @@
     "typeit": "^8.7.1",
     "typeit-react": "^2.6.4",
     "zustand": "^4.3.3"
-  },
-  "devDependencies": {
-    "duplicate-package-checker-webpack-plugin": "^3.0.0"
   }
 }

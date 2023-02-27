@@ -3,8 +3,6 @@ const path = require('path')
 const i18n = require('./next-i18next.config')
 const { STORYBLOK_TOKEN, NODE_ENV } = process.env
 
-const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
-
 const nextConfig = {
     env: {
     STORYBLOK_TOKEN,
@@ -22,10 +20,6 @@ const nextConfig = {
     styledComponents: true
   },
   ...i18n,
-  webpack: (config, options) => {
-    config.plugins.push(new DuplicatePackageCheckerPlugin())
-    return config
-  }
 }
 
 module.exports = nextConfig
