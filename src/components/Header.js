@@ -16,7 +16,7 @@ const Header = styled.header`
 export default ({ blok, theme }) => {
   return (
     <Header theme={theme}>
-      <img src="/pk.svg" />
+      <img src="/pk.svg" height="80" width="80" />
     </Header>
   )
 }
