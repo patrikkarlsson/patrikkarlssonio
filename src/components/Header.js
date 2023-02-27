@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import pk from '../public/pk.svg'
 
 const Header = styled.header`
   ${({ theme }) => css`
