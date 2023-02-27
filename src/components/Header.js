@@ -1,19 +1,22 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Navigation from './Navigation'
+import styled, { css } from 'styled-components'
 
-import logo from '../assets/logo.svg'
+const Header = styled.header`
+  ${({ theme }) => css`
+    height: ${theme.menuHeight};
+    padding: 2rem;
+    box-sizing: content-box;
 
-const Header = () => {
+    img {
+      height: 100%;
+      width: auto;
+    }
+  `}
+`
+
+export default ({ blok, theme }) => {
   return (
-    <header>
-      <div className="brand">
-        <Link to="/"><img className="logo" src={logo} alt="Patrik Karlsson logo"/></Link>
-      </div>
-      <Navigation />
-      <div className="actions"></div>
-    </header>
+    <Header theme={theme}>
+      <img src="/pk.svg" />
+    </Header>
   )
 }
-
-export default Header

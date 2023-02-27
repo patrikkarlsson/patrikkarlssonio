@@ -1,18 +1,36 @@
-import React from 'react'
-import Header from './Header'
+import styled, { css } from 'styled-components'
+import Lenis from '@studio-freight/lenis'
+import { useFrame } from '@studio-freight/hamo'
+import { useStore } from '@/lib/store'
+import { useLayoutEffect } from 'react'
 
+const Main = styled.main`
+  ${({ theme }) => css`
+    min-height: 100vh;
+  `}
+`
 
-import '../assets/scss/main.scss'
+export default ({ children }) => {
+  const [lenis, setLenis] = useStore((state) => [state.lenis, state.setLenis])
 
-const Layout = ({ children }) => {
+  useLayoutEffect(() => {
+    const lenis = new Lenis()
+    window.lenis = lenis
+    setLenis(lenis)
+
+    return () => {
+      lenis.destroy()
+      setLenis(null)
+    }
+  }, [])
+
+  useFrame((time) => {
+    lenis?.raf(time)
+  }, [])
+
   return (
-    <>
-      <Header />
-      <main>
-        {children}
-      </main>
-    </>
+    <Main className="container">
+      {children}
+    </Main>
   )
 }
-
-export default Layout

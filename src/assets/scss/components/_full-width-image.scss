@@ -1,9 +1,0 @@
-.full-width-image {
-  @include row();
-  @include center();
-
-  .image {
-    @include col('xs', 12);
-    @include col('sm', 6);
-  }
-}

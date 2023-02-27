@@ -1,41 +1,42 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "name": "storyblok-nextjs-styledcomponents-boilerplate",
   "version": "0.1.0",
-  "license": "0BSD",
+  "private": true,
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "generate": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "upload": "node node_modules/@thebond/storyblok-nextjs-helpers-components/src/upload/index.js"
   },
   "dependencies": {
+    "@camwiegert/typical": "^0.1.1",
     "@drewbot/sass-flexbox-grid": "^2.0.7",
-    "gatsby": "^2.25.1",
-    "gatsby-image": "^2.4.21",
-    "gatsby-plugin-sass": "^2.4.1",
-    "gatsby-plugin-sharp": "^2.7.1",
-    "gatsby-source-filesystem": "^2.4.1",
-    "gatsby-transformer-sharp": "^2.5.21",
-    "node-sass": "^4.14.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "sass-rem": "^2.0.1"
+    "@storyblok/react": "^2.0.12",
+    "@studio-freight/hamo": "^0.6.12",
+    "@studio-freight/lenis": "^0.2.28",
+    "@studio-freight/tempus": "^0.0.36",
+    "@thebond/storyblok-nextjs-helpers-components": "./../storyblok/storyblok/components",
+    "babel-plugin-styled-components": "^2.0.7",
+    "eslint": "8.34.0",
+    "eslint-config-next": "13.1.6",
+    "gsap": "^3.11.4",
+    "i18next": "^22.4.10",
+    "next": "13.1.6",
+    "next-i18next": "^13.1.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "^12.1.5",
+    "react-use": "^17.4.0",
+    "sass": "^1.58.3",
+    "storyblok-rich-text-react-renderer": "^2.6.1",
+    "styled-components": "^5.3.6",
+    "typeit": "^8.7.1",
+    "typeit-react": "^2.6.4",
+    "zustand": "^4.3.3"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^6.0.0",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.13",
-    "prettier": "2.1.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "duplicate-package-checker-webpack-plugin": "^3.0.0"
   }
 }
