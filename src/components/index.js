@@ -11,7 +11,7 @@ const components =  {
   horizontal_item: HorizontalItem,
   horizontal_scroll: HorizontalScroll,
   connect: Connect,
-  type_animation: TypeAnimation
+  type_animation: TypeAnimation,
 }
 
 export default components
