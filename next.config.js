@@ -1,25 +1,29 @@
 /** @type {import('next').NextConfig} */
-const path = require('path')
-const i18n = require('./next-i18next.config')
+const withNextIntl = require('next-intl/plugin')()
+
 const { STORYBLOK_TOKEN, NODE_ENV } = process.env
 
-const nextConfig = {
+const nextConfig = withNextIntl({
     env: {
     STORYBLOK_TOKEN,
     APP_ENV: NODE_ENV
   },
   reactStrictMode: true,
-  swcMinify: true,
+  compiler: {
+    styledComponents: {
+      displayName: true,
+    },
+  },
   trailingSlash: true,
   images: {
-    domains: ['a.storyblok.com'],
-    unoptimized: false,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    unoptimized: true,
+    remotePatterns: [
+      {
+        hostname: 'a.storyblok.com',
+      }
+    ],
+    domains: ['a.storyblok.com', 'localhost:3000'],
   },
-  compiler: {
-    styledComponents: true
-  },
-  ...i18n,
-}
+})
 
 module.exports = nextConfig

@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-const useStore = create((set, get) => ({
+const useStore = create((set) => ({
   lenis: undefined,
   setLenis: (lenis) => set({ lenis }),
   overflow: true,
