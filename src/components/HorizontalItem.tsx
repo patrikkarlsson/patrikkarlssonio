@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { StoryblokComponent, storyblokEditable } from '@storyblok/react/rsc'
-import { ContentType, HorizontalItemType } from '@/types'
+import { HorizontalItemType } from '@/types'
 
 const HorizontalItem = styled.div`
 ${({ theme }) => css`

@@ -1,9 +1,8 @@
 'use client'
 import { createGlobalStyle, css } from 'styled-components'
-import { DefaultTheme } from '@/types'
 
 const GlobalStyles = createGlobalStyle`
-  ${({ theme } : { theme : DefaultTheme }) => css`
+  ${() => css`
     html {
       scroll-behavior: initial;
       overscroll-behavior: none;

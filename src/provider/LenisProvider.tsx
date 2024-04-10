@@ -1,5 +1,4 @@
 'use client'
-// @ts-ignore
 import { useFrame } from '@studio-freight/hamo'
 import Lenis from '@studio-freight/lenis'
 import { useEffect } from 'react'
@@ -20,7 +19,8 @@ const LenisProvider = (props: React.PropsWithChildren) => {
       lenis.destroy()
       setLenis(null)
     }
-  }, [setLenis])
+  },
+  [setLenis])
 
   useFrame((time:any) => {
     if (lenis) {

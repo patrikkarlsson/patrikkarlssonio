@@ -10,7 +10,7 @@ type Props = {
 
 const TypeAnimation = ({ blok } : Props) => {
 
-  const Component = blok.heading_type
+  const Component = blok.heading_type as keyof JSX.IntrinsicElements
 
   const phrases = blok.phrases.map((phrase: PhraseType) => {
     return phrase.text

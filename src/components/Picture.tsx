@@ -1,7 +1,7 @@
 import { storyblokEditable } from '@storyblok/react/rsc'
 import styled, { css, useTheme } from 'styled-components'
 import NextImage from 'next/image'
-import { DefaultTheme, PictureType } from '@/types'
+import { PictureType } from '@/types'
 import PictureSize from './PictureSize'
 
 const Img = styled(NextImage)`
@@ -29,7 +29,7 @@ const Picture = ({
   priority = false 
 } : Props) => {
 
-  const theme = useTheme() as DefaultTheme
+  const theme = useTheme()
   
   if (!blok.mobile) return null
   

@@ -1,5 +1,5 @@
 import { SbBlokData } from '@storyblok/react/rsc'
-import { DefaultTheme as SCDefaultTheme } from 'styled-components'
+
 export type ColorType = {
   value: string,
 }

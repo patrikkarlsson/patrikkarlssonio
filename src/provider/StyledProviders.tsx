@@ -3,12 +3,12 @@
 import StyledComponentsRegistry from '@/styles/registry'
 import { PropsWithChildren } from 'react'
 import { ThemeProvider } from 'styled-components'
-import theme from '@/styles/DefaultTheme'
+import DefaultTheme from '@/styles/DefaultTheme'
 
 const Providers = (props: PropsWithChildren ) => {
   return (
     <StyledComponentsRegistry>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={DefaultTheme}>
         {props.children} 
       </ThemeProvider>
     </StyledComponentsRegistry>

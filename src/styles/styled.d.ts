@@ -31,7 +31,7 @@ declare module 'styled-components' {
     },
     fluidType: (property:string, minVW:string, maxVW:string, minSize:string, maxSize:string) => string,
     numericToRem: (px:number) => string,
-    remToNumeric: (rem:string) => number,
+    remToNumeric: (rem:string) => string,
     viewPortHeight: () => string,
     fullwidthOutsideContainer: () => string,
     resetFullwidthOutsideContainer: () => string,

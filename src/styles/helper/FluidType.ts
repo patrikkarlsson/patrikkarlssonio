@@ -1,4 +1,5 @@
 export const getUnit = (val:string) => {
+  /* eslint-disable-next-line */
   const textRegex = /[^0-9\.]+/g
   const result = textRegex.exec(val)?.join()
   return result

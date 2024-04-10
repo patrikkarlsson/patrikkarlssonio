@@ -4,12 +4,14 @@ import { draftMode } from 'next/headers'
 import favicon from './../../../../public/pk.svg'
 import { getStoryblokApi, StoryblokStory } from '@storyblok/react/rsc'
 import { SBLinkType } from '@/types'
+import { Suspense } from 'react'
+import React from 'react'
 
 type Props = {
   params: { locale: string, slug: string[] }
 }
 
-export async function fetchData(isEnabled:boolean, slug: string) {
+async function fetchData(isEnabled:boolean, slug: string) {
   const storyblokApi = getStoryblokApi()
   const version = (isEnabled || process.env.NODE_ENV == 'development') ? 'draft' : 'published'
   return storyblokApi.get(`cdn/stories/${slug}`,
@@ -76,7 +78,7 @@ export default async function Page({ params }: Props) {
   const { isEnabled } = draftMode()
   
   if (!params.slug) {
-    params.slug = []
+    params.slug = ['']
   }
 
   const { data } = await fetchData(isEnabled,
@@ -87,13 +89,15 @@ export default async function Page({ params }: Props) {
   }
   
   return (
-    <StoryblokStory
-      story={data.story}
-      name={data.story.name}
-      slug={params.slug}
-      bridgeOptions={{ customParent: process.env.CUSTOM_DOMAIN,
-        preventClicks: true }}
-    />
+    <Suspense>
+      <StoryblokStory
+        story={data.story}
+        name={data.story.name}
+        slug={params.slug}
+        bridgeOptions={{ customParent: process.env.CUSTOM_DOMAIN,
+          preventClicks: true }}
+      />
+    </Suspense>
   )
 }
 

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { storyblokEditable } from '@storyblok/react/rsc'
-import { ContentType, TypeAnimationType } from '@/types'
+import { ContentType } from '@/types'
 import { render } from 'storyblok-rich-text-react-renderer'
 import TypeAnimation from './TypeAnimation'
 
@@ -50,7 +50,7 @@ export default function ContentBlock ({
       {render(blok.content,
         {
           blokResolvers: {
-            'type_animation': (blok: TypeAnimationType) => (<TypeAnimation blok={blok} />)
+            'type_animation': (blok: any) => (<TypeAnimation blok={blok} />)
           }
         })}
     </Content>
