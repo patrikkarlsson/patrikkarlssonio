@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useWindowSize } from 'react-use'
-import { useScroll } from '@/hooks/useScroll'
+import { useScroll } from '@/hooks/UseScroll'
 import styled, { css } from 'styled-components'
 import { gsap } from 'gsap'
 import { useRect, useMediaQuery } from '@studio-freight/hamo'

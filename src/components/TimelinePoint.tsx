@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { useRect } from '@studio-freight/hamo'
 import { useWindowSize } from 'react-use'
-import { useScroll } from '@/hooks/useScroll'
+import { useScroll } from '@/hooks/UseScroll'
 import { mapRange, clamp } from '@/lib/maths'
 import { ContentType, TagType, TimelinePointType } from '@/types'
 import { useState } from 'react'

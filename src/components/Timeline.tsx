@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { useRect } from '@studio-freight/hamo'
-import { useScroll } from '@/hooks/useScroll'
+import { useScroll } from '@/hooks/UseScroll'
 import { mapRange, clamp } from '@/lib/maths'
 import { useWindowSize } from 'react-use'
 
